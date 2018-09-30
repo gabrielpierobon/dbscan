@@ -1,18 +1,15 @@
-#DBSCAN clustering for data shapes k-means can’t handle well (in Python)
+# DBSCAN clustering for data shapes k-means can’t handle well (in Python)
 
 In this post I’d like to take some content from Introduction to Machine Learning with Python by Andreas C. Müller & Sarah Guido and briefly expand on one of the examples provided to showcase some of the strengths of DBSCAN clustering when k-means clustering doesn’t seem to handle the data shape well. I’m going to go right to the point, so I encourage you to read the full content of Chapter 3, starting on page 168 if you would like to expand on this topic. I’ll be quoting the book when describing the working of the algorithm.
 
 ## Clustering
 * it’s the task of partitioning the dataset into groups, called clusters
-* the goal is to split up the data ins such a way that points within a single cluster are very similar and points in a different cluster are different
-k-means clustering
-tries to find cluster centers that are representative of certain regions of the data
-alternates between two steps: assigning each data point to the closest cluster center, and then setting each cluster center as the mean of the data points that are assigned to it
-the algorithm is finished when the assignment of instances to clusters no longer changes
+* the goal is to split up the data ins such a way that points within a single cluster are very similar and points in a different cluster are different k-means clustering tries to find cluster centers that are representative of certain regions of the data alternates between two steps: assigning each data point to the closest cluster center, and then setting each cluster center as the mean of the data points that are assigned to it the algorithm is finished when the assignment of instances to clusters no longer changes 
+
 This is how k-means work in a visual representation:
 
-import mglearn
-mglearn.plots.plot_kmeans_algorithm()
+```import mglearn
+mglearn.plots.plot_kmeans_algorithm()```
 
 One issue with k-means clustering is that it assumes that all directions are equally important for each cluster. This is usually not a big problem, unless we come across with some oddly shape data.
 
