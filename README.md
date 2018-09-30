@@ -8,8 +8,8 @@ In this post I’d like to take some content from Introduction to Machine Learni
 
 This is how k-means work in a visual representation:
 
-```import mglearn
-mglearn.plots.plot_kmeans_algorithm()```
+import mglearn
+mglearn.plots.plot_kmeans_algorithm()
 
 One issue with k-means clustering is that it assumes that all directions are equally important for each cluster. This is usually not a big problem, unless we come across with some oddly shape data.
 
